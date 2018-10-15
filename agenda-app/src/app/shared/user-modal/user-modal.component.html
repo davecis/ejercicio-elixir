@@ -1,0 +1,17 @@
+<app-modal [title]="'Usuario'" [options]="{ size: 'md' }" (closeModal)="closeGearMadal()">
+
+  <label>
+    <b>Nombre:</b>
+  </label>
+  <input type="text" class="form-control" [(ngModel)]="name" *ngIf="!user">
+  <input type="text" class="form-control" [(ngModel)]="user.name" *ngIf="user">
+
+  <label>
+    <b>Teléfono:</b>
+  </label>
+  <input type="text" class="form-control" [(ngModel)]="number" *ngIf="!user">
+  <input type="text" class="form-control" [(ngModel)]="user.number" *ngIf="user">
+  <br>
+  <button type="submit" class="btn btn-success" (click)="save()">Guardar</button>
+
+</app-modal>

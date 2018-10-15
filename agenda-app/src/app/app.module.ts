@@ -9,10 +9,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
+import { ModalComponent } from './shared/modal/modal.component';
+import { UserModalComponent } from './shared/user-modal/user-modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalComponent,
+    UserModalComponent
   ],
   imports: [
     BrowserModule,

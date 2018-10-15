@@ -1,0 +1,12 @@
+<ng-template #content>
+  <div class="modal-header">
+    <h3 class="modal-title">{{title}}</h3>
+  </div>
+  <div class="modal-body">
+    <ng-content></ng-content>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="onCloseModal()">{{cancelButtonText}}</button>
+    <button *ngIf="modalForm" type="button" class="btn btn-primary" [disabled]="modalForm?.form.invalid" (click)="onSendForm()">{{acceptButtonText}}</button>
+  </div>
+</ng-template>
